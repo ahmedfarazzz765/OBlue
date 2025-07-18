@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oblue – Freelance Services</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style-responsive-additions.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script>
+    // Smooth scroll for anchor links
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('a[href^="#"]');
+      for (const link of links) {
+        link.addEventListener('click', e => {
+          e.preventDefault();
+          const target = document.querySelector(link.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      }
+    });
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <img class="logo-img" src="images/logo.png" alt="O'Blue Logo" />
+      <div class="nav-actions">
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <a href="#contact" class="btn-primary">Get a Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h2>Your One‑Stop Creative & Tech Solutions</h2>
+      <p>Web Development | Video Editing | Graphic & Logo Design | App Handling</p>
+      <div class="hero-buttons">
+        <a href="#services" class="btn-primary">See Services</a>
+        <a href="#portfolio" class="btn-secondary">Watch Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <h3>Web Development</h3>
+        <p>Responsive and SEO-friendly websites using modern tech stacks.</p>
+      </div>
+      <div class="service-card">
+        <h3>Video Editing</h3>
+        <p>High-quality video cuts, transitions, effects, and audio syncs.</p>
+      </div>
+      <div class="service-card">
+        <h3>Graphic & Logo Design</h3>
+        <p>Professional visuals tailored for your brand identity.</p>
+      </div>
+      <div class="service-card">
+        <h3>App & Website Handling</h3>
+        <p>Support, updates, content management and app configurations.</p>
+      </div>
+      <div class="service-card">
+        <h3>Social Media Marketing</h3>
+        <p>Strategic campaigns to boost your brand's online presence.</p>
+      </div>
+      <div class="service-card">
+        <h3>Social Media Managing</h3>
+        <p>Comprehensive management of your social media channels.</p>
+      </div>
+      <div class="service-card">
+        <h3>Content Creating</h3>
+        <p>Engaging and creative content tailored to your audience.</p>
+      </div>
+    </div>
+  </section>
+
+<!-- Portfolio Section -->
+<section class="portfolio" id="portfolio">
+  <h2>Recent Work</h2>
+  <div class="portfolio-gallery">
+    <!-- Work 1 -->
+    <div class="portfolio-item" onclick="togglePortfolioDetails(1)">
+      <div class="portfolio-thumbnail" style="background-image: url('https://source.unsplash.com/400x300/?website,design');"></div>
+      <p class="portfolio-title">Web Development</p>
+    </div>
+    <div class="portfolio-details" id="portfolio-detail-1">
+      <p>This project involved building a responsive e-commerce platform using HTML, CSS, JavaScript, and Node.js. The design is sleek, fast, and user-friendly.</p>
+    </div>
+
+    <!-- Work 2 -->
+    <div class="portfolio-item" onclick="togglePortfolioDetails(2)">
+      <div class="portfolio-thumbnail" style="background-image: url('https://source.unsplash.com/400x300/?video,editing');"></div>
+      <p class="portfolio-title">Video Editing</p>
+    </div>
+    <div class="portfolio-details" id="portfolio-detail-2">
+      <p>We edited a 3-minute promotional video with transitions, effects, and synced audio for a travel agency campaign that boosted their social reach by 40%.</p>
+    </div>
+
+    <!-- Work 3 -->
+    <div class="portfolio-item" onclick="togglePortfolioDetails(3)">
+      <div class="portfolio-thumbnail" style="background-image: url('https://source.unsplash.com/400x300/?graphic,design');"></div>
+      <p class="portfolio-title">Logo & Graphic Design</p>
+    </div>
+    <div class="portfolio-details" id="portfolio-detail-3">
+      <p>Custom-designed brand assets including logos, business cards, and banners for a startup clothing brand, keeping it modern and vibrant.</p>
+    </div>
+  </div>
+</section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials" id="testimonials">
+    <h2>What Clients Say</h2>
+    <div class="testimonial-cards">
+      <div class="testimonial-card">
+        <p>"Oblue transformed our website with a stunning design and seamless functionality. Highly recommended!"</p>
+        <h4>- Sarah J.</h4>
+      </div>
+      <div class="testimonial-card">
+        <p>"The video editing services were top-notch. Quick turnaround and excellent quality."</p>
+        <h4>- Mike D.</h4>
+      </div>
+      <div class="testimonial-card">
+        <p>"Professional, creative, and reliable. The logo design perfectly captured our brand."</p>
+        <h4>- Emily R.</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <h2>About Us</h2>
+    <p>We are  a versatile freelancing Company with experience in web development, video editing, graphic design, and more. We help brands look good and perform better online.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2>Get in Touch</h2>
+    <form action="mailto:babarfaraz48@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message"></textarea>
+      <button type="submit" class="btn-primary">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="Back to top">&#8679;</button>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-column">
+        <h3>Lets talk about</h3>
+        <p>Video editing excellence, creative storytelling,Transform your content with professional editing, captivating visuals, and strategic social media management.</p>
+        <a href="#contact" class="btn-learn-more">Learn more</a>
+      </div>
+      <div class="footer-column">
+        <h3>Links</h3>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Projects</a></li>
+          <li><a href="#testimonials">Testimony</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Services</h3>
+        <ul class="footer-links">
+          <li><a href="#services">Video Editing</a></li>
+          <li><a href="#services">Graphics & Logo Design</a></li>
+          <li><a href="#services">Content Writting</a></li>
+          <li><a href="#services">Website development</a></li>
+          <li><a href="#services">App development</a></li>
+          <li><a href="#services">Website Maintenance</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Have a Questions?</h3>
+        <div class="social-icons">
+          <a href="#" aria-label="Twitter" class="social-icon twitter" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.724-.949.564-2.005.974-3.127 1.195-.897-.959-2.178-1.559-3.594-1.559-2.723 0-4.928 2.206-4.928 4.928 0 .39.045.765.127 1.124-4.094-.205-7.725-2.165-10.157-5.144-.424.729-.666 1.577-.666 2.476 0 1.708.87 3.216 2.188 4.099-.807-.026-1.566-.247-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.317 0-.626-.03-.927-.086.627 1.956 2.444 3.379 4.6 3.419-1.68 1.318-3.809 2.105-6.102 2.105-.396 0-.787-.023-1.17-.067 2.179 1.397 4.768 2.213 7.557 2.213 9.054 0 14-7.496 14-13.986 0-.21 0-.423-.015-.633.962-.695 1.8-1.562 2.46-2.549z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/numb.man.964421" aria-label="Facebook" class="social-icon facebook" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.733 0-1.325.592-1.325 1.325v21.351c0 .732.592 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.466.099 2.797.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.312h3.59l-.467 3.622h-3.123v9.293h6.116c.732 0 1.324-.592 1.324-1.324v-21.35c0-.733-.592-1.325-1.324-1.325z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram" class="social-icon instagram" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M7.75 2h8.5a5.75 5.75 0 0 1 5.75 5.75v8.5a5.75 5.75 0 0 1-5.75 5.75h-8.5a5.75 5.75 0 0 1-5.75-5.75v-8.5a5.75 5.75 0 0 1 5.75-5.75zm0 2a3.75 3.75 0 0 0-3.75 3.75v8.5a3.75 3.75 0 0 0 3.75 3.75h8.5a3.75 3.75 0 0 0 3.75-3.75v-8.5a3.75 3.75 0 0 0-3.75-3.75h-8.5zm8.75 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+          <p class="footer-bottom-text">Copyright © 2025 All rights reserved | Powered by <a href="https://O'Blue.com" target="_blank" rel="noopener noreferrer"><img class="footer-logo-img" src="images/img.jpg" alt="O'Blue Logo" /></a></p>
+  </footer>
+
+  <script>
+    // Back to top button functionality
+    const backToTopButton = document.getElementById('backToTop');
+    window.onscroll = function() {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        backToTopButton.style.display = "block";
+      } else {
+        backToTopButton.style.display = "none";
+      }
+    };
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+  <script>
+    function togglePortfolioDetails(id) {
+      const current = document.getElementById('portfolio-detail-' + id);
+      const allDetails = document.querySelectorAll('.portfolio-details');
+  
+      allDetails.forEach(el => {
+        if (el !== current) el.style.display = 'none';
+      });
+  
+      current.style.display = (current.style.display === 'block') ? 'none' : 'block';
+    }
+  </script>
+  <!-- Modal HTML (add this before </body>) -->
+<div id="portfolioModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2 id="modalTitle">Project Title</h2>
+    <p id="modalDescription">Project description will go here.</p>
+  </div>
+</div>
+
+<!-- JavaScript for Modal (add before </body>) -->
+<script>
+  function openModal(title, description) {
+    document.getElementById("modalTitle").innerText = title;
+    document.getElementById("modalDescription").innerText = description;
+    document.getElementById("portfolioModal").style.display = "block";
+  }
+
+  function closeModal() {
+    document.getElementById("portfolioModal").style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    const modal = document.getElementById("portfolioModal");
+    if (event.target === modal) {
+      closeModal();
+    }
+  }
+</script>
+
+<!-- CSS for Modal (add to style.css or in <style> tag in <head>) -->
+<style>
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  padding-top: 80px;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 30px 40px;
+  border-radius: 12px;
+  width: 80%;
+  max-width: 600px;
+  animation: slideIn 0.4s ease;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+@keyframes slideIn {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #ff0000;
+}
+</style>
+
+<!-- Update Portfolio Items (in your portfolio-gallery section) -->
+<div class="portfolio-item" onclick="openModal('Web Development', 'This project involved building a responsive e-commerce platform using HTML, CSS, JavaScript, and Node.js. The design is sleek, fast, and user-friendly.')">
+  <div class="portfolio-thumbnail" style="background-image: url('https://source.unsplash.com/400x300/?website,design');"></div>
+  <p class="portfolio-title">Web Development</p>
+</div>
+
+</body>
+</html>
