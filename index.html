@@ -96,34 +96,24 @@
 <section class="portfolio" id="portfolio">
   <h2>Recent Work</h2>
   <div class="portfolio-gallery">
-    <!-- Work 1 -->
-    <div class="portfolio-item" onclick="togglePortfolioDetails(1)">
-      <div class="portfolio-thumbnail" style="background-image: url('https://source.unsplash.com/400x300/?website,design');"></div>
-      <p class="portfolio-title">Web Development</p>
-    </div>
-    <div class="portfolio-details" id="portfolio-detail-1">
-      <p>This project involved building a responsive e-commerce platform using HTML, CSS, JavaScript, and Node.js. The design is sleek, fast, and user-friendly.</p>
-    </div>
+<div class="portfolio-item" onclick="openModal('Web Development', 'This project involved building a responsive e-commerce platform using HTML, CSS, JavaScript, and Node.js. The design is sleek, fast, and user-friendly.')">
+  <div class="portfolio-thumbnail" style="background-image: url('web.jpeg');"></div>
+  <p class="portfolio-title">Web Development</p>
+</div>
+    
+<div class="portfolio-item" onclick="openModal('Video Editing', 'High-quality video editing with smooth transitions, story-driven cuts, and export-ready formats for YouTube, Instagram, and more.')">
+  <div class="portfolio-thumbnail" style="background-image: url('video editing.jpeg');"></div>
+  <p class="portfolio-title">Video Editing</p>
+</div>
 
-    <!-- Work 2 -->
-    <div class="portfolio-item" onclick="togglePortfolioDetails(2)">
-      <div class="portfolio-thumbnail" style="background-image: url('https://source.unsplash.com/400x300/?video,editing');"></div>
-      <p class="portfolio-title">Video Editing</p>
-    </div>
-    <div class="portfolio-details" id="portfolio-detail-2">
-      <p>We edited a 3-minute promotional video with transitions, effects, and synced audio for a travel agency campaign that boosted their social reach by 40%.</p>
-    </div>
-
-    <!-- Work 3 -->
-    <div class="portfolio-item" onclick="togglePortfolioDetails(3)">
-      <div class="portfolio-thumbnail" style="background-image: url('https://source.unsplash.com/400x300/?graphic,design');"></div>
-      <p class="portfolio-title">Logo & Graphic Design</p>
-    </div>
-    <div class="portfolio-details" id="portfolio-detail-3">
-      <p>Custom-designed brand assets including logos, business cards, and banners for a startup clothing brand, keeping it modern and vibrant.</p>
+    <div class="portfolio-item" onclick="openModal('Logo & Graphic Design', 'Custom-designed logos and graphic content tailored to your brand identity with modern and minimalist styles.')">
+      <div class="portfolio-thumbnail" style="background-image: url('graphic design.jpeg');"></div>
+      <p class="portfolio-title">Logo Design and Graphics Design</p>
     </div>
   </div>
 </section>
+
+
 
   <!-- Testimonials Section -->
   <section class="testimonials" id="testimonials">
@@ -316,6 +306,22 @@
   <div class="portfolio-thumbnail" style="background-image: url('https://source.unsplash.com/400x300/?website,design');"></div>
   <p class="portfolio-title">Web Development</p>
 </div>
+<script>
+
+  function closeModal(id) {
+    document.getElementById(id).style.display = "none";
+  }
+
+  // Close modal if user clicks outside modal-content
+  window.onclick = function(event) {
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  };
+</script>
 
 </body>
 </html>
