@@ -1,7 +1,15 @@
-* {
+ca* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: #014d9a; /* Changed back to blue */
+  height: 100%;
 }
 
 body {
@@ -11,6 +19,39 @@ body {
   color: #333;
   line-height: 1.6;
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+.scrolling-image-bar {
+  margin: 0;
+  padding: 0;
+  background-color: #a90c0c; 
+  box-sizing: border-box;
+  border: none;
+  overflow: hidden;
+}
+
+.image-carousel {
+  display: flex;
+  gap: 0;
+  width: max-content;
+  animation: scrollLeft 12s linear infinite;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.image-carousel img {
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  border: none;
+  object-fit: cover;
+  user-select: none;
+  pointer-events: none;
+  background-color: transparent;
 }
 
 a {
@@ -479,6 +520,12 @@ nav a:hover {
   font-size: 16px;
   font-weight: 400;
   font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
+
+.footer-container {
+  margin: 0;
+  padding: 0;
 }
 
 .footer-container {
@@ -568,9 +615,15 @@ nav a:hover {
 
 .footer-bottom-text {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 0;
   font-size: 14px;
   color: #777;
+  padding-bottom: 20px;
+}
+
+footer {
+  margin: 0;
+  padding: 0 0 20px 0;
 }
 
 .footer-bottom-text a {
@@ -611,4 +664,88 @@ footer {
   height: 40px;
   width: auto;
   vertical-align: left;
+}
+
+/* Scrolling Image Bar */
+.scrolling-image-bar {
+  width: 100vw;
+  max-width: none;
+  margin: 0;
+  overflow: hidden;
+  /* Removed border-radius and box-shadow to remove side space */
+  /* border-radius: 12px; */
+  /* box-shadow: 0 4px 10px rgba(0,0,0,0.1); */
+  background-color: #014d9a; /* Changed to match header blue */
+  padding: 0;
+  border: none; /* Remove any border */
+}
+
+.image-carousel img {
+  height: 900px; /* Increased size further as per user request */
+  width: 100%;
+  border-radius: 0; /* Remove border radius */
+  object-fit: cover;
+  user-select: none;
+  pointer-events: none;
+  margin: 0; /* Remove any default margin */
+  padding: 0; /* Remove any default padding */
+}
+
+.image-carousel {
+  display: flex;
+  gap: 0;
+  width: max-content;
+  animation: scrollLeft 12s linear infinite;
+}
+
+.image-carousel img {
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+}
+
+.image-carousel img {
+  height: 700px; /* Increased size further as per user request */
+  width: 100%;
+  border-radius: 0; /* Remove border radius */
+  object-fit: cover;
+  user-select: none;
+  pointer-events: none;
+  margin: 0; /* Remove any default margin */
+  padding: 0; /* Remove any default padding */
+}
+
+.image-carousel img {
+  height: 450px; /* Increased size further as per user request */
+  width: 100%;
+  border-radius: 0; /* Remove border radius */
+  object-fit: cover;
+  user-select: none;
+  pointer-events: none;
+  margin: 0; /* Remove any default margin */
+  padding: 0; /* Remove any default padding */
+}
+
+.image-carousel img {
+  height: 240px; /* Increased size further as per user request */
+  border-radius: 10px;
+  object-fit: cover;
+  user-select: none;
+  pointer-events: none;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(calc(-100% + 100vw));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.image-carousel {
+  animation: scrollLeft 24s ease-in-out infinite;
 }
