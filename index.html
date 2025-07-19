@@ -45,6 +45,22 @@
     </div>
   </header>
 
+  <!-- Scrolling Image Bar -->
+  <section class="scrolling-image-bar">
+    <div class="image-carousel" id="imageCarousel">
+      <img src="2.png" alt="Oblue 2" />
+      <img src="3.png" alt="Oblue 3" />
+      <img src="4.png" alt="Oblue 4" />
+      <img src="5.png" alt="Oblue 5" />
+      <img src="6.png" alt="Oblue 6" />
+      <img src="2.png" alt="Oblue 2" />
+      <img src="3.png" alt="Oblue 3" />
+      <img src="4.png" alt="Oblue 4" />
+      <img src="5.png" alt="Oblue 5" />
+      <img src="6.png" alt="Oblue 6" />
+    </div>
+  </section>
+
   <!-- Hero Section -->
   <section class="hero" id="home">
     <div class="hero-content">
@@ -234,7 +250,7 @@
     <h2 id="modalTitle">Project Title</h2>
     <p id="modalDescription">Project description will go here.</p>
   </div>
-</div>
+</div> 
 
 <!-- JavaScript for Modal (add before </body>) -->
 <script>
@@ -253,6 +269,12 @@
     if (event.target === modal) {
       closeModal();
     }
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
   }
 </script>
 
