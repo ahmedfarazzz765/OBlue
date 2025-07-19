@@ -666,86 +666,43 @@ footer {
   vertical-align: left;
 }
 
-/* Scrolling Image Bar */
+/* Scrolling Image Bar – Square Corners */
 .scrolling-image-bar {
   width: 100vw;
-  max-width: none;
-  margin: 0;
   overflow: hidden;
-  /* Removed border-radius and box-shadow to remove side space */
-  /* border-radius: 12px; */
-  /* box-shadow: 0 4px 10px rgba(0,0,0,0.1); */
-  background-color: #014d9a; /* Changed to match header blue */
+  background-color: #014d9a;
   padding: 0;
-  border: none; /* Remove any border */
+  margin: 0;
+  border: none; /* ✅ Square edge */
 }
 
-.image-carousel img {
-  height: 900px; /* Increased size further as per user request */
-  width: 100%;
-  border-radius: 0; /* Remove border radius */
-  object-fit: cover;
-  user-select: none;
-  pointer-events: none;
-  margin: 0; /* Remove any default margin */
-  padding: 0; /* Remove any default padding */
-}
-
+/* Carousel container */
 .image-carousel {
   display: flex;
-  gap: 0;
   width: max-content;
-  animation: scrollLeft 12s linear infinite;
+  animation: scrollBackForth 30s ease-in-out infinite alternate;
 }
 
+/* Images inside carousel */
 .image-carousel img {
-  margin: 0;
+  height: 380px; /* ✅ Maintain desired size */
+  width: auto;
+  object-fit: cover;
+  user-select: none;
+  pointer-events: none;
+  margin: 0; /* ✅ No gap */
   padding: 0;
-  border-radius: 0;
+  border: none;
+  border-radius: 0; /* ✅ No curve at all */
 }
 
-.image-carousel img {
-  height: 700px; /* Increased size further as per user request */
-  width: 100%;
-  border-radius: 0; /* Remove border radius */
-  object-fit: cover;
-  user-select: none;
-  pointer-events: none;
-  margin: 0; /* Remove any default margin */
-  padding: 0; /* Remove any default padding */
-}
-
-.image-carousel img {
-  height: 450px; /* Increased size further as per user request */
-  width: 100%;
-  border-radius: 0; /* Remove border radius */
-  object-fit: cover;
-  user-select: none;
-  pointer-events: none;
-  margin: 0; /* Remove any default margin */
-  padding: 0; /* Remove any default padding */
-}
-
-.image-carousel img {
-  height: 240px; /* Increased size further as per user request */
-  border-radius: 10px;
-  object-fit: cover;
-  user-select: none;
-  pointer-events: none;
-}
-
-@keyframes scrollLeft {
+  
+/* Smooth back-and-forth scroll */
+@keyframes scrollBackForth {
   0% {
     transform: translateX(0);
   }
-  50% {
+  100% {
     transform: translateX(calc(-100% + 100vw));
   }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-.image-carousel {
-  animation: scrollLeft 24s ease-in-out infinite;
 }
