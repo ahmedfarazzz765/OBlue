@@ -113,3 +113,25 @@
     padding: 12px;
   }
 }
+
+/* Fix unwanted bottom bar */
+footer, .footer, .footer-bottom-text {
+  background-color: #800000 !important;
+  color: black !important;
+}
+
+.footer-column p,
+.footer-links a,
+.footer-bottom-text,
+.footer-column h3 {
+  color: black !important;
+}
+
+.btn-learn-more {
+  background-color: #007bff !important;
+  color: white !important;
+}
+
+.btn-learn-more:hover {
+  background-color: #0056b3 !important;
+}
