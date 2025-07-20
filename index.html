@@ -278,51 +278,6 @@
   }
 </script>
 
-<!-- CSS for Modal (add to style.css or in <style> tag in <head>) -->
-<style>
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 10000;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(4px);
-  padding-top: 80px;
-}
-
-.modal-content {
-  background-color: #fff;
-  margin: auto;
-  padding: 30px 40px;
-  border-radius: 12px;
-  width: 80%;
-  max-width: 600px;
-  animation: slideIn 0.4s ease;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-}
-
-@keyframes slideIn {
-  from { transform: translateY(50px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-.close-btn {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.close-btn:hover {
-  color: #ff0000;
-}
-</style>
-
 <script>
 
   function closeModal(id) {
