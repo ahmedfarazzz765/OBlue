@@ -244,40 +244,54 @@
       current.style.display = (current.style.display === 'block') ? 'none' : 'block';
     }
   </script>
-  <!-- Modal HTML (add this before </body>) -->
+<!-- Modal HTML -->
 <div id="portfolioModal" class="modal">
   <div class="modal-content">
-    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <span class="close-btn" id="closeBtn">&times;</span>
     <h2 id="modalTitle">Project Title</h2>
     <p id="modalDescription">Project description will go here.</p>
   </div>
-</div> 
+</div>
+
 
 <!-- JavaScript for Modal (add before </body>) -->
 <script>
-  function openModal(title, description) {
-    document.getElementById("modalTitle").innerText = title;
-    document.getElementById("modalDescription").innerText = description;
-    document.getElementById("portfolioModal").style.display = "block";
-  }
-
-  function closeModal() {
-    document.getElementById("portfolioModal").style.display = "none";
-  }
-
-  window.onclick = function(event) {
+  document.addEventListener("DOMContentLoaded", function () {
     const modal = document.getElementById("portfolioModal");
-    if (event.target === modal) {
-      closeModal();
+    const closeBtn = document.getElementById("closeBtn");
+
+    // Open modal (expose globally)
+    window.openModal = function (title, description) {
+      document.getElementById("modalTitle").innerText = title;
+      document.getElementById("modalDescription").innerText = description;
+      modal.style.display = "block";
+    };
+
+    // Close modal
+    function closeModal() {
+      modal.style.display = "none";
     }
-    const modals = document.querySelectorAll('.modal');
-    modals.forEach(modal => {
-      if (event.target === modal) {
-        modal.style.display = "none";
+
+    // Close when clicking on ❌
+    closeBtn.addEventListener("click", closeModal);
+
+    // Close when clicking outside
+    window.addEventListener("click", function (e) {
+      if (e.target === modal) {
+        closeModal();
       }
     });
-  }
+
+    // Close when pressing ESC
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") {
+        closeModal();
+      }
+    });
+  });
 </script>
+<button onclick="openModal('My Project', 'This is a working modal!')">Open Modal</button>
+
 <style>
   .modal {
   display: none;
