@@ -29,10 +29,11 @@
   <!-- Header -->
   <header>
     <div class="container header-container">
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
       <img class="logo-img" src="logo.png" alt="O'Blue Logo" />
       <div class="nav-actions">
         <nav>
-          <ul class="nav-links">
+          <ul class="nav-links" id="navLinks">
             <li><a href="#home">Home</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
@@ -140,16 +141,16 @@
     <h2>What Clients Say</h2>
     <div class="testimonial-cards">
       <div class="testimonial-card">
-        <p>"Oblue transformed our website with a stunning design and seamless functionality. Highly recommended!"</p>
-        <h4>- Sarah J.</h4>
+        <p>Oblue transformed our website with a stunning design and seamless functionality. Highly recommended!</p>
+        <h4>Sarah James</h4>
       </div>
       <div class="testimonial-card">
-        <p>"The video editing services were top-notch. Quick turnaround and excellent quality."</p>
-        <h4>- Mike D.</h4>
+        <p>The video editing services were top-notch. Quick turnaround and excellent quality.</p>
+        <h4>Mike David</h4>
       </div>
       <div class="testimonial-card">
-        <p>"Professional, creative, and reliable. The logo design perfectly captured our brand."</p>
-        <h4>- Emily R.</h4>
+        <p>Professional, creative, and reliable. The logo design perfectly captured our brand.</p>
+        <h4>Emily Watson</h4>
       </div>
     </div>
   </section>
@@ -166,7 +167,7 @@
    <form action="https://formsubmit.co/babarfaraz48@gmail.com" method="POST">
   <input type="text" name="name" placeholder="Your Name" required>
   <input type="email" name="email" placeholder="Your Email" required>
-  <textarea name="message" placeholder="Your Message" required></textarea>
+  <input type="message" name="message" placeholder="Your Message" required>
   <button type="submit" class="btn-primary">Send Message</button>
 </form>
 
@@ -339,6 +340,13 @@
 }
 
 </style>
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById("navLinks");
+    nav.classList.toggle("show");
+  }
+</script>
+
 <script>
 
   function closeModal(id) {
