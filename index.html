@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="description" content="Oblue is a creative freelance service offering web development, video editing, graphic design, and digital marketing to boost your brand." />
+  <meta name="keywords" content="freelance web development, video editing, graphic design, logo design, social media marketing, Oblue services" />
+  <meta name="author" content="Ahmed Faraz" />  
   <meta charset="UTF-8" />
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Oblue – Freelance Services</title>
-   <!-- Open Graph for Facebook -->
+  <!-- Open Graph for Facebook -->
 <meta property="og:title" content="Oblue – Creative Freelance Services">
 <meta property="og:description" content="Web development, video editing, graphic design & more. Affordable and creative solutions.">
 <meta property="og:image" content="https://oblue.site/logo.png">
@@ -16,10 +18,29 @@
 <meta name="twitter:title" content="Oblue – Creative Freelance Services">
 <meta name="twitter:description" content="Affordable, creative, and modern freelance services including web, video, and design.">
 <meta name="twitter:image" content="https://oblue.site/logo.png">
- <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="style-responsive-additions.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Oblue",
+      "url": "https://oblue.site",
+      "logo": "https://oblue.site/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+92-321-5468166",
+        "contactType": "customer service"
+      },
+      "sameAs": [
+        "https://www.facebook.com/numb.man.964421"
+      ]
+    }
+    </script>
+    
   <script>
     // Smooth scroll for anchor links
     document.addEventListener('DOMContentLoaded', () => {
@@ -93,7 +114,6 @@
       </div>
     </div>
   </section>
-
   <!-- Services Section -->
   <section class="services" id="services">
     <h2>Our Services</h2>
@@ -138,15 +158,24 @@
   <p class="portfolio-title">Web Development</p>
 </div>
     
-<div class="portfolio-item" onclick="openModal('Video Editing', 'High-quality video editing with smooth transitions, story-driven cuts, and export-ready formats for YouTube, Instagram, and more.')">
+<div class="portfolio-item" onclick="openModal('Video Editing', 'High-quality video editing with smooth transitions, story-driven cuts, and export-ready formats for YouTube, Instagram, and more.', [{src: 'video 1.mp4', description: 'An engaging event highlight reel capturing key moments from a professional seminar or celebration. Includes sharp cuts, well-paced transitions, and synced background music to convey energy and emotion. Ideal for promotional sharing on social media or client websites.'}, {src: 'video 2.mp4', description: 'A visually immersive travel video edited with cinematic transitions, slow-motion effects, and vibrant color grading. Designed to evoke wanderlust and showcase breathtaking scenery, perfect for vloggers, tourism brands, or personal storytelling.'}, {src: 'video 3.mp4', description: 'A visually immersive travel video edited with cinematic transitions, slow-motion effects, and vibrant color grading. Designed to evoke wanderlust and showcase breathtaking scenery, perfect for vloggers, tourism brands, or personal storytelling.'}])">
   <div class="portfolio-thumbnail" style="background-image: url('video editing.jpeg');"></div>
   <p class="portfolio-title">Video Editing</p>
 </div>
 
-    <div class="portfolio-item" onclick="openModal('Logo & Graphic Design', 'Custom-designed logos and graphic content tailored to your brand identity with modern and minimalist styles.')">
-      <div class="portfolio-thumbnail" style="background-image: url('graphic design.jpeg');"></div>
-      <p class="portfolio-title">Logo & Graphics Design</p>
-    </div>
+<div class="portfolio-item" onclick="openModal('Logo & Graphic Design', 'Custom-designed logos and graphic content tailored to your brand identity with modern and minimalist styles.', [
+  {src: '1.png', description: ''},
+  {src: '2.png', description: ''},
+  {src: '3.png', description: ''},
+  {src: '4.png', description: ''},
+  {src: '5.png', description: ''},
+  {src: '6.png', description: ''},
+  {src: '7.png', description: ''},
+  {src: '8.png', description: ''}
+])">
+  <div class="portfolio-thumbnail" style="background-image: url('graphic design.jpeg');"></div>
+  <p class="portfolio-title">Logo & Graphics Design</p>
+</div>
   </div>
 </section>
   <!-- Testimonials Section -->
@@ -267,7 +296,8 @@
   <div class="modal-content">
     <span class="close-btn" id="closeBtn">&times;</span>
     <h2 id="modalTitle">Project Title</h2>
-    <p id="modalDescription">Project description will go here.</p>
+  <p id="modalDescription">Project description will go here.</p>
+  <div id="modalVideos" style="margin-top: 20px; display: flex; flex-direction: column; gap: 15px; padding: 10px; border-radius: 8px;"></div>
   </div>
 </div>
 
@@ -279,9 +309,47 @@
     const closeBtn = document.getElementById("closeBtn");
 
     // Open modal (expose globally)
-    window.openModal = function (title, description) {
+    window.openModal = function (title, description, videos) {
       document.getElementById("modalTitle").innerText = title;
       document.getElementById("modalDescription").innerText = description;
+
+      const modalVideos = document.getElementById("modalVideos");
+      modalVideos.innerHTML = ""; // Clear previous videos
+
+      if (videos && Array.isArray(videos) && videos.length > 0) {
+        videos.forEach(mediaObj => {
+          const container = document.createElement("div");
+          container.style.display = "flex";
+          container.style.flexDirection = "column";
+          container.style.alignItems = "center";
+          container.style.maxWidth = "320px";
+          container.style.margin = "0 auto";
+
+          let mediaElement;
+          if (mediaObj.src.endsWith('.mp4')) {
+            mediaElement = document.createElement("video");
+            mediaElement.src = mediaObj.src;
+            mediaElement.controls = true;
+            mediaElement.width = 420;
+          } else {
+            mediaElement = document.createElement("img");
+            mediaElement.src = mediaObj.src;
+            mediaElement.style.width = "320px";
+          }
+          mediaElement.style.borderRadius = "8px";
+
+          const desc = document.createElement("p");
+          desc.innerText = mediaObj.description;
+          desc.style.marginTop = "8px";
+          desc.style.fontSize = "14px";
+          desc.style.textAlign = "center";
+
+          container.appendChild(mediaElement);
+          container.appendChild(desc);
+          modalVideos.appendChild(container);
+        });
+      }
+
       modal.style.display = "block";
     };
 
@@ -376,7 +444,7 @@
     });
   };
 </script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2425718706969572"
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2425718706969572"
      crossorigin="anonymous"></script>
 <!-- WhatsApp Chat Button -->
 <a href="https://wa.me/923215468166" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
