@@ -114,7 +114,7 @@ a:hover {
 header {
   background: #014d9a;
   color: #fff;
-  padding: 8px 0;
+  padding: 4px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -128,13 +128,13 @@ header {
 
 header h1 {
   margin-left: 20px;
-  font-size: 36px;
+  font-size: 24px;
   font-weight: 800;
   letter-spacing: 1px;
 }
 
 .logo {
-  font-size: 150px;
+  font-size: 80px;
   font-weight: 800;
   letter-spacing: 1px;
   line-height: 1;
@@ -166,7 +166,7 @@ nav a:hover {
   justify-content: space-between;
   align-items: center;
   background: #004ea3;
-  padding: 10px 20px;
+  padding: 1px 2.5px;
   position: sticky;
   top: 0;
   z-index: 999;
