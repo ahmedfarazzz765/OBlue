@@ -112,9 +112,9 @@ a:hover {
 
 /* Header */
 header {
-  background: #014d9a;
+  background: #100340;
   color: #fff;
-  padding: 4px 0;
+  padding: 2px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -128,13 +128,13 @@ header {
 
 header h1 {
   margin-left: 20px;
-  font-size: 24px;
+  font-size: 240px;
   font-weight: 800;
   letter-spacing: 1px;
 }
 
 .logo {
-  font-size: 80px;
+  font-size: 340px; /* increased font size for bigger logo text */
   font-weight: 800;
   letter-spacing: 1px;
   line-height: 1;
@@ -226,7 +226,7 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
-  background-color: #800000;
+  background-color: rgb(222, 219, 232);
   color: black;
   padding: 100px 20px;
   text-align: center;
@@ -251,7 +251,7 @@ nav a:hover {
 
 /* Services */
 .services {
-  background: #fff;
+  background: rgb(222, 219, 232);
   padding: 60px 20px;
   text-align: center;
   animation: fadeInUp 1s ease forwards;
@@ -266,7 +266,7 @@ nav a:hover {
 .service-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  gap: 50px;
 }
 
 .service-card {
@@ -467,7 +467,7 @@ nav a:hover {
 
 /* Testimonials */
 .testimonials {
-  background: #fff;
+  background: rgb(222, 219, 232);
   padding: 60px 20px;
   text-align: center;
   animation: fadeInUp 1s ease forwards;
@@ -515,7 +515,7 @@ nav a:hover {
 /* About */
 .about {
   padding: 60px 20px;
-  background: #fff;
+  background: rgb(222, 219, 232);
   animation: fadeInUp 1s ease forwards;
 }
 
@@ -535,7 +535,7 @@ nav a:hover {
 /* Contact */
 .contact {
   padding: 60px 20px;
-  background: #f8f9fc;
+  background:rgb(222, 219, 232);
   animation: fadeInUp 1s ease forwards;
 }
 
@@ -611,8 +611,8 @@ nav a:hover {
 
 /* Footer */
 .footer {
-  background-color: #014d9a;
-  color: #ccc;
+  background-color: rgb(222, 219, 232);
+  color:rgb(222, 219, 232);
   padding: 60px 0 40px;
   font-size: 16px;
   font-weight: 400;
@@ -654,7 +654,7 @@ nav a:hover {
 
 .btn-learn-more {
   display: inline-block;
-  background-color: #ff0000;
+  background-color: #100340;
   color: #fff;
   padding: 10px 20px;
   border-radius: 6px;
@@ -706,7 +706,7 @@ nav a:hover {
 }
 
 .social-icon:hover {
-  background-color: #ff0000;
+  background-color: #100340;
   color: #fff;
 }
 
@@ -724,7 +724,7 @@ footer {
 }
 
 .footer-bottom-text a {
-  color: #ff0000;
+  color: rgb(222, 219, 232);
   text-decoration: underline;
 }
 
@@ -747,7 +747,7 @@ footer {
 }
 
 .logo-img {
-  height: 100px; /* Adjusted to make the logo bar thinner */
+  height: 150px; /* increased height for bigger logo */
   width: auto;
   margin-right: 20px;
   transition: transform 0.3s ease-in-out;
@@ -763,46 +763,56 @@ footer {
   vertical-align: left;
 }
 
-/* Scrolling Image Bar – Square Corners */
-.scrolling-image-bar {
+/* Fade Carousel Section */
+.fade-carousel-section {
   width: 100vw;
   overflow: hidden;
-  background-color: #014d9a;
+  background-color: rgb(222, 219, 232);
   padding: 0;
   margin: 0;
-  border: none; /* ✅ Square edge */
-}
-
-/* Carousel container */
-.image-carousel {
+  border: none;
   display: flex;
-  width: max-content;
-  animation: scrollBackForth 30s ease-in-out infinite alternate;
+  justify-content: center;
+  align-items: center;
+}
+.fade-carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  min-height: 440px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+.fade-carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
-/* Images inside carousel */
-.image-carousel img {
-  height: 380px; /* ✅ Maintain desired size */
-  width: auto;
-  object-fit: cover;
+.carousel-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 420px; /* increased height for a little more size */
+  object-fit: cover; /* changed from contain to cover */
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
   user-select: none;
   pointer-events: none;
-  margin: 0; /* ✅ No gap */
-  padding: 0;
-  border: none;
-  border-radius: 0; /* ✅ No curve at all */
+  border-radius: 15px; /* added rounded corners */
 }
 
-  
-/* Smooth back-and-forth scroll */
-@keyframes scrollBackForth {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-100% + 100vw));
-  }
+.carousel-image.active {
+  opacity: 1;
 }
+.carousel-image {
+  border-radius: 15px;
+}
+
 .whatsapp-float {
   position: fixed;
   bottom: -15px; /* 🔁 CHANGE this value */
@@ -902,4 +912,4 @@ img {
     font-size: 18px;
   }
 }
-
+}
