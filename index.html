@@ -82,16 +82,25 @@
     </div>
   </header>
 
-  <!-- Fade Carousel Section -->
-  <section class="fade-carousel-section">
-    <div class="fade-carousel-container">
-      <div class="fade-carousel">
-        <img src="1.jpg" alt="Oblue 1" class="carousel-image active">
-        <img src="2.jpg" alt="Oblue 2" class="carousel-image">
-        <img src="3.jpg" alt="Oblue 3" class="carousel-image">
-        <img src="4.jpg" alt="Oblue 4" class="carousel-image">
-        <img src="5.jpg" alt="Oblue 5" class="carousel-image">
-      </div>
+  <!-- Scrolling Image Bar -->
+  <section class="scrolling-image-bar">
+    <div class="image-carousel" id="imageCarousel">
+      <img src="1.png" alt="Oblue 1" />
+      <img src="2.png" alt="Oblue 2" />
+      <img src="3.png" alt="Oblue 3" />
+      <img src="4.png" alt="Oblue 4" />
+      <img src="5.png" alt="Oblue 5" />
+      <img src="6.png" alt="Oblue 6" />
+      <img src="7.png" alt="Oblue 7" />
+      <img src="8.png" alt="Oblue 8" />
+      <img src="1.png" alt="Oblue 1" />
+      <img src="2.png" alt="Oblue 2" />
+      <img src="3.png" alt="Oblue 3" />
+      <img src="4.png" alt="Oblue 4" />
+      <img src="5.png" alt="Oblue 5" />
+      <img src="6.png" alt="Oblue 6" />
+      <img src="7.png" alt="Oblue 7" />
+      <img src="8.png" alt="Oblue 8" />
     </div>
   </section>
 
@@ -386,32 +395,12 @@
 }
 
 </style>
-  <script>
-    function toggleMenu() {
-      const nav = document.getElementById("navLinks");
-      nav.classList.toggle("show");
-    }
-
-    // Fade Carousel JavaScript
-    document.addEventListener('DOMContentLoaded', function() {
-      const images = document.querySelectorAll('.carousel-image');
-      let currentIndex = 0;
-      
-      function showNextImage() {
-        // Hide current image
-        images[currentIndex].classList.remove('active');
-        
-        // Move to next image
-        currentIndex = (currentIndex + 1) % images.length;
-        
-        // Show new image
-        images[currentIndex].classList.add('active');
-      }
-      
-      // Change image every 4 seconds
-      setInterval(showNextImage, 4000);
-    });
-  </script>
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById("navLinks");
+    nav.classList.toggle("show");
+  }
+</script>
 
 <script>
 
