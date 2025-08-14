@@ -112,9 +112,9 @@ a:hover {
 
 /* Header */
 header {
-  background: #100340;
+  background: #014d9a;
   color: #fff;
-  padding: 2px 0;
+  padding: 4px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -128,13 +128,13 @@ header {
 
 header h1 {
   margin-left: 20px;
-  font-size: 240px;
+  font-size: 24px;
   font-weight: 800;
   letter-spacing: 1px;
 }
 
 .logo {
-  font-size: 340px; /* increased font size for bigger logo text */
+  font-size: 80px;
   font-weight: 800;
   letter-spacing: 1px;
   line-height: 1;
@@ -226,7 +226,7 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
-  background-color: rgb(222, 219, 232);
+  background-color: #800000;
   color: black;
   padding: 100px 20px;
   text-align: center;
@@ -251,7 +251,7 @@ nav a:hover {
 
 /* Services */
 .services {
-  background: rgb(222, 219, 232);
+  background: #fff;
   padding: 60px 20px;
   text-align: center;
   animation: fadeInUp 1s ease forwards;
@@ -266,7 +266,7 @@ nav a:hover {
 .service-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 50px;
+  gap: 30px;
 }
 
 .service-card {
@@ -467,7 +467,7 @@ nav a:hover {
 
 /* Testimonials */
 .testimonials {
-  background: rgb(222, 219, 232);
+  background: #fff;
   padding: 60px 20px;
   text-align: center;
   animation: fadeInUp 1s ease forwards;
@@ -515,7 +515,7 @@ nav a:hover {
 /* About */
 .about {
   padding: 60px 20px;
-  background: rgb(222, 219, 232);
+  background: #fff;
   animation: fadeInUp 1s ease forwards;
 }
 
@@ -535,7 +535,7 @@ nav a:hover {
 /* Contact */
 .contact {
   padding: 60px 20px;
-  background:rgb(222, 219, 232);
+  background: #f8f9fc;
   animation: fadeInUp 1s ease forwards;
 }
 
@@ -611,8 +611,8 @@ nav a:hover {
 
 /* Footer */
 .footer {
-  background-color: rgb(222, 219, 232);
-  color:rgb(222, 219, 232);
+  background-color: #014d9a;
+  color: #ccc;
   padding: 60px 0 40px;
   font-size: 16px;
   font-weight: 400;
@@ -654,7 +654,7 @@ nav a:hover {
 
 .btn-learn-more {
   display: inline-block;
-  background-color: #100340;
+  background-color: #ff0000;
   color: #fff;
   padding: 10px 20px;
   border-radius: 6px;
@@ -706,7 +706,7 @@ nav a:hover {
 }
 
 .social-icon:hover {
-  background-color: #100340;
+  background-color: #ff0000;
   color: #fff;
 }
 
@@ -724,7 +724,7 @@ footer {
 }
 
 .footer-bottom-text a {
-  color: rgb(222, 219, 232);
+  color: #ff0000;
   text-decoration: underline;
 }
 
@@ -747,7 +747,7 @@ footer {
 }
 
 .logo-img {
-  height: 150px; /* increased height for bigger logo */
+  height: 100px; /* Adjusted to make the logo bar thinner */
   width: auto;
   margin-right: 20px;
   transition: transform 0.3s ease-in-out;
@@ -763,56 +763,46 @@ footer {
   vertical-align: left;
 }
 
-/* Fade Carousel Section */
-.fade-carousel-section {
+/* Scrolling Image Bar – Square Corners */
+.scrolling-image-bar {
   width: 100vw;
   overflow: hidden;
-  background-color: rgb(222, 219, 232);
+  background-color: #014d9a;
   padding: 0;
   margin: 0;
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.fade-carousel-container {
-  position: relative;
-  width: 100%;
-  max-width: 900px;
-  min-height: 440px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-.fade-carousel {
-  position: relative;
-  width: 100%;
-  height: 100%;
+  border: none; /* ✅ Square edge */
 }
 
-.carousel-image {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 420px; /* increased height for a little more size */
-  object-fit: cover; /* changed from contain to cover */
-  opacity: 0;
-  transition: opacity 1.5s ease-in-out;
+/* Carousel container */
+.image-carousel {
+  display: flex;
+  width: max-content;
+  animation: scrollBackForth 30s ease-in-out infinite alternate;
+}
+
+/* Images inside carousel */
+.image-carousel img {
+  height: 380px; /* ✅ Maintain desired size */
+  width: auto;
+  object-fit: cover;
   user-select: none;
   pointer-events: none;
-  border-radius: 15px; /* added rounded corners */
+  margin: 0; /* ✅ No gap */
+  padding: 0;
+  border: none;
+  border-radius: 0; /* ✅ No curve at all */
 }
 
-.carousel-image.active {
-  opacity: 1;
+  
+/* Smooth back-and-forth scroll */
+@keyframes scrollBackForth {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% + 100vw));
+  }
 }
-.carousel-image {
-  border-radius: 15px;
-}
-
 .whatsapp-float {
   position: fixed;
   bottom: -15px; /* 🔁 CHANGE this value */
@@ -912,4 +902,5 @@ img {
     font-size: 18px;
   }
 }
-}
+
+
