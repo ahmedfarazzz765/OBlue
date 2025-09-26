@@ -114,16 +114,17 @@ a:hover {
 header {
   background: #014d9a;
   color: #fff;
-  padding: 4px 0;
-  display: flex;
-  align-items: center;
+  padding: 8px 20px; /* adjust spacing instead of auto-resizing */
+  display: flex; 
+  align-items: center; /* keeps items vertically centered */
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   position: relative; /* was 'sticky' */
   top: unset; /* remove sticky behavior */
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0,0,0,0.3);
   transition: background-color 0.3s ease;
+  height: 70px; /* 🔑 fixed height */
 }
 
 header h1 {
@@ -134,18 +135,24 @@ header h1 {
 }
 
 .logo {
-  font-size: 80px;
+  font-size: 80px; /* you can change this freely */
   font-weight: 800;
   letter-spacing: 1px;
-  line-height: 1;
+  line-height: 1; 
   margin: 0;
   display: inline-block;
+  height: 100%; /* keep inside header */
+  display: flex;
+  align-items: center; /* center logo vertically */
 }
 
+/* Navigation */
 nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 nav a {
@@ -160,22 +167,26 @@ nav a:hover {
   background-color: #00b894;
   color: #fff;
 }
-/* Basic navbar */
+
+/* Navbar wrapper */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: #004ea3;
-  padding: 1px 2.5px;
+  padding: 0 20px; /* keep neat padding */
   position: sticky;
   top: 0;
   z-index: 999;
+  height: 70px; /* 🔑 fixed navbar height */
 }
 
 .nav-links {
   display: flex;
   gap: 25px;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links li a {
@@ -191,6 +202,7 @@ nav a:hover {
   color: white;
   text-decoration: none;
 }
+
 
 /* Hamburger menu hidden by default on large screens */
 .menu-toggle {
@@ -902,5 +914,6 @@ img {
     font-size: 18px;
   }
 }
+
 
 
