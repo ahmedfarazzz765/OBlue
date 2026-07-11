@@ -1,343 +1,403 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O'Blue | Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Use Inter font family */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #120549; /* A deep navy-gray for the background */
-        }
-        /* Custom scrollbar for a more polished look */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #1F2937;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #4B5563;
-            border-radius: 10px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #6B7280;
-        }
-        /* Style for the modal backdrop */
-        .modal-backdrop {
-            background-color: rgba(0, 0, 0, 0.75);
-        }
-        /* Animation for modal entrance */
-        .modal-enter {
-            animation: fadeIn 0.3s ease-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.95); }
-            to { opacity: 1; transform: scale(1); }
-        }
-    </style>
-</head>
-<body class="text-gray-200">
-
-    <!-- Header Section -->
-    <header class="py-8 md:py-12">
-        <div class="container mx-auto px-6 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold text-white tracking-tight">Finest Works</h1>
-            <p class="mt-4 text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
-                We craft compelling brand identities, develop performance-driven websites, and create engaging digital content that drives results.
-            </p>
-        </div>
-    </header>
-
-    <!-- Main Portfolio Grid -->
-    <main class="container mx-auto px-6 py-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
-            <!-- Case Study 1: Motor Link London (Branding) -->
-            <div class="bg-gray-800 rounded-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300 shadow-lg cursor-pointer" onclick="openModal('modal-motorlink-brand')">
-<img src="9.png" alt="Motor Link London Branding" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold text-white">Motor Link London</h3>
-                    <p class="text-gray-400 mt-1">Brand Identity & Website Design</p>
-                </div>
-            </div>
-
-            <!-- Case Study 2: Chawal Ghar -->
-            <div class="bg-gray-800 rounded-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300 shadow-lg cursor-pointer" onclick="openModal('modal-chawalghar')">
-<img src="11.png" alt="Chawal Ghar Branding" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold text-white">Chawal Ghar</h3>
-                    <p class="text-gray-400 mt-1">Cultural Brand Identity</p>
-                </div>
-            </div>
-
-            <!-- Case Study 3: Koogle -->
-            <div class="bg-gray-800 rounded-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300 shadow-lg cursor-pointer" onclick="openModal('modal-koogle')">
-<img src="10.png" alt="Koogle AI Content" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold text-white">Koogle App</h3>
-                    <p class="text-gray-400 mt-1">AI Content & Video Editing</p>
-                </div>
-            </div>
-
-            <!-- Case Study 4: Academic Writing -->
-            <div class="bg-gray-800 rounded-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300 shadow-lg cursor-pointer" onclick="openModal('modal-academic')">
-<img src="12.jpg" alt="Academic Research Paper" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold text-white">Academic Research</h3>
-                    <p class="text-gray-400 mt-1">Published Research Article</p>
-                </div>
-            </div>
-
-            
-            
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="text-center py-10 mt-12 border-t border-gray-700">
-        <p class="text-gray-500">&copy; 2025 O'Blue Creative. All rights reserved.</p>
-    </footer>
-
-    <!-- MODALS SECTION -->
-    <!-- Each modal is hidden by default and shown via JavaScript -->
-
-    <!-- Modal for Motor Link Branding -->
-    <div id="modal-motorlink-brand" class="fixed inset-0 z-50 hidden items-center justify-center p-4 modal-backdrop">
-        <div class="bg-gray-800 rounded-lg shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto modal-enter">
-            <div class="p-6 md:p-8">
-                <div class="flex justify-between items-start">
-                    <h2 class="text-3xl font-bold text-white">Motor Link London - Brand Identity</h2>
-                    <button onclick="closeModal('modal-motorlink-brand')" class="text-gray-400 hover:text-white">&times;</button>
-                </div>
-                <p class="mt-2 text-gray-400">A premium brand identity for a high-performance car dealership in the UK.</p>
-                <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div>
-                        <h4 class="text-lg font-semibold text-white mb-2">Project Brief</h4>
-                        <p class="text-gray-300">To create a complete brand identity that captures speed, power, and trustworthiness.</p>
-                        
-                        <h4 class="text-lg font-semibold text-white mt-6 mb-2">Deliverables</h4>
-                        <ul class="list-disc list-inside text-gray-300 space-y-1">
-                            <li>Logo Design (Urdu + English)</li>
-                            <li>Color Palette (Crimson, Charcoal, White)</li>
-                            <li>Typography System (Neue Haas Grotesk)</li>
-                            <li>Business Cards & Social Media Visuals</li>
-                            <li>Full Brand Guideline PDF</li>
-                        </ul>
-
-                        <h4 class="text-lg font-semibold text-white mt-6 mb-2">Proof</h4>
-                        <a href="https://motorlinklondon.co.uk/" class="inline-block bg-red-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-red-700 transition-colors">View Live Website</a>
-                    </div>
-                    <div>
-                        <img src="9.png" class="rounded-lg shadow-md w-full">
-                        <p class="text-center text-sm text-gray-500 mt-2">Brand guideline mockup</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal for Chawal Ghar -->
-    <div id="modal-chawalghar" class="fixed inset-0 z-50 hidden items-center justify-center p-4 modal-backdrop">
-       <div class="bg-gray-800 rounded-lg shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto modal-enter">
-            <div class="p-6 md:p-8">
-                <div class="flex justify-between items-start">
-                    <h2 class="text-3xl font-bold text-white">Chawal Ghar - Cultural Branding</h2>
-                    <button onclick="closeModal('modal-chawalghar')" class="text-gray-400 hover:text-white">&times;</button>
-                </div>
-                <p class="mt-2 text-gray-400">A South Asian food brand delivering premium quality basmati rice.</p>
-                <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div>
-                        <h4 class="text-lg font-semibold text-white mb-2">Project Brief</h4>
-                        <p class="text-gray-300">Develop a full brand identity reflecting cultural heritage for use across packaging, ads, and social media.</p>
-                        
-                        <h4 class="text-lg font-semibold text-white mt-6 mb-2">Design Highlights</h4>
-                        <ul class="list-disc list-inside text-gray-300 space-y-1">
-                            <li>Warm, earthy colors (Burnt Orange, Cream)</li>
-                            <li>Bilingual branding (Urdu & English)</li>
-                            <li>Mix of traditional (Aldhabi) and modern (Cinzel) fonts</li>
-                            <li>Focus on packaging and stickers</li>
-                        </ul>
-
-                        <h4 class="text-lg font-semibold text-white mt-6 mb-2">Proof</h4>
-                        <p class="text-green-400 font-semibold">Live use on physical product packaging confirmed by client.</p>
-                    </div>
-                    <div>
-                        <img src="1.png" class="rounded-lg shadow-md w-full">
-                         <p class="text-center text-sm text-gray-500 mt-2">Product packaging mockup</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oblue – Portfolio</title>
+  <link rel="icon" href="favicon-new.png" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* Modal Backdrop and Wrapper Styling */
+    .modal-backdrop {
+        display: none; /* Hidden by default */
+        position: fixed;
+        z-index: 10000;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(8px);
+        overflow-y: auto;
+        padding: 60px 20px;
+        align-items: center;
+        justify-content: center;
+    }
     
-    <!-- Add other modals here following the same structure for Koogle, Academic, and Motor Link Web -->
+    .modal-backdrop.flex {
+        display: flex;
+    }
 
-    <!-- Modal for Koogle -->
-    <div id="modal-koogle" class="fixed inset-0 z-50 hidden items-center justify-center p-4 modal-backdrop">
-        <div class="bg-gray-800 rounded-lg shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto modal-enter">
-            <div class="p-6 md:p-8">
-                <div class="flex justify-between items-start">
-                    <h2 class="text-3xl font-bold text-white">Koogle App - AI Content & Video Editing</h2>
-                    <button onclick="closeModal('modal-koogle')" class="text-gray-400 hover:text-white">&times;</button>
-                </div>
-                <p class="mt-2 text-gray-400">An innovative AI-powered platform for content creation and video editing.</p>
-                <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div>
-                        <h4 class="text-lg font-semibold text-white mb-2">Project Brief</h4>
-                        <p class="text-gray-300">To develop a user-friendly AI tool that streamlines video editing and content generation.</p>
-                        
-                        <h4 class="text-lg font-semibold text-white mt-6 mb-2">Features</h4>
-                        <ul class="list-disc list-inside text-gray-300 space-y-1">
-                            <li>AI-driven video editing automation</li>
-                            <li>Content generation with natural language processing</li>
-                            <li>Intuitive user interface with real-time previews</li>
-                            <li>Cloud-based collaboration tools</li>
-                        </ul>
+    .modal-enter {
+        animation: slideIn 0.4s ease forwards;
+    }
 
-                        <h4 class="text-lg font-semibold text-white mt-6 mb-2">Proof</h4>
-                        <a href="#" id="viewDemoLink" class="inline-block bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">View Demo</a>
-                    </div>
-                    <div>
-                        <img id="koogleLogo" src="10.png" class="rounded-lg shadow-md w-full" alt="Koogle Logo">
-<video id="koogleVideo" class="rounded-lg shadow-md w-full max-w-full max-h-[70vh] hidden" controls muted preload="metadata" >
-    <source src="Koogle.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
-                        <p class="text-center text-sm text-gray-500 mt-2" id="koogleCaption">Koogle app interface mockup</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    @keyframes slideIn {
+        from { transform: translateY(40px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
 
-    <!-- Modal for Academic -->
-    <div id="modal-academic" class="fixed inset-0 z-50 hidden items-center justify-center p-4 modal-backdrop">
-        <div class="bg-gray-800 rounded-lg shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto modal-enter">
-            <div class="p-6 md:p-8">
-                <div class="flex justify-between items-start">
-                    <h2 class="text-3xl font-bold text-white">Academic Research - Published Research Article</h2>
-                    <button onclick="closeModal('modal-academic')" class="text-gray-400 hover:text-white">&times;</button>
-                </div>
-                <p class="mt-2 text-gray-400">A comprehensive research article published in a reputed academic journal.</p>
-                <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div>
-                        <h4 class="text-lg font-semibold text-white mb-2">Research Summary</h4>
-                        <p class="text-gray-300">An in-depth study exploring innovative methodologies and findings in the field.</p>
-                        
-                        <h4 class="text-lg font-semibold text-white mt-6 mb-2">Highlights</h4>
-                        <ul class="list-disc list-inside text-gray-300 space-y-1">
-                            <li>Novel research techniques</li>
-                            <li>Significant contributions to the field</li>
-                            <li>Peer-reviewed and published</li>
-                            <li>Collaborative research efforts</li>
-                        </ul>
+    /* Override modal content specific to portfolio */
+    .modal-content {
+        padding: 40px;
+        max-width: 900px;
+        width: 100%;
+        margin: auto;
+        position: relative;
+    }
 
-                        <h4 class="text-lg font-semibold text-white mt-6 mb-2">Proof</h4>
-                        <a href="#" class="inline-block bg-green-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-green-700 transition-colors">Read Article</a>
-                    </div>
-                    <div>
-                        <img src="https://placehold.co/800x600/10B981/FFFFFF?text=Research+Paper+Mockup" class="rounded-lg shadow-md w-full">
-                        <p class="text-center text-sm text-gray-500 mt-2">Research paper mockup</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    .close-btn {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 32px;
+        color: var(--text-secondary);
+        cursor: pointer;
+        transition: color 0.3s;
+        border: none;
+        background: transparent;
+    }
+    .close-btn:hover {
+        color: #ff4757;
+    }
 
+    .modal-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        margin-top: 20px;
+    }
 
-    <script>
-        // Simple JavaScript to control the modals
-        
-        function openModal(modalId) {
-            const modal = document.getElementById(modalId);
-            if (modal) {
-                // Use flex to center the modal content
-                modal.classList.remove('hidden');
-                modal.classList.add('flex');
-                document.body.style.overflow = 'hidden'; // Prevent background scrolling
-            }
+    @media (max-width: 768px) {
+        .modal-grid {
+            grid-template-columns: 1fr;
         }
+    }
+    
+    .modal-list {
+        list-style: disc inside;
+        color: var(--text-secondary);
+        margin: 10px 0 20px;
+    }
+    .modal-list li {
+        margin-bottom: 5px;
+    }
 
-        function closeModal(modalId) {
-            const modal = document.getElementById(modalId);
-            if (modal) {
-                modal.classList.add('hidden');
-                modal.classList.remove('flex');
-                document.body.style.overflow = 'auto'; // Restore background scrolling
+    /* Small tweaks for the portfolio cards */
+    .portfolio-title span {
+        display: block;
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+        font-weight: 400;
+        margin-top: 5px;
+        font-family: var(--font-body);
+    }
+  </style>
+</head>
+<body>
 
-                // Pause and reset video, show logo again if modal is koogle
-                if (modalId === 'modal-koogle') {
-                    const video = document.getElementById('koogleVideo');
-                    const logo = document.getElementById('koogleLogo');
-                    const caption = document.getElementById('koogleCaption');
-                    if (video) {
-                        video.pause();
-                        video.currentTime = 0;
-                        video.classList.add('hidden');
-                    }
-                    if (logo) {
-                        logo.classList.remove('hidden');
-                    }
-                    if (caption) {
-                        caption.textContent = 'Koogle app interface mockup';
-                    }
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <img class="logo-img" src="logo.png" alt="O'Blue Logo" />
+      <div class="nav-actions">
+        <nav>
+          <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <a href="contact.html" class="btn-primary">Get a Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <main style="min-height: 80vh; padding-top: 100px;">
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+      <div style="text-align: center; margin-bottom: 40px;">
+        <h2>Finest Works</h2>
+        <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 600px; margin: auto;">We craft compelling brand identities, develop performance-driven websites, and create engaging digital content that drives results.</p>
+      </div>
+
+      <div class="portfolio-gallery">
+        
+        <!-- Case Study 1: Motor Link London -->
+        <div class="portfolio-item" onclick="openModal('modal-motorlink-brand')">
+          <div class="portfolio-thumbnail" style="background-image: url('9.png');"></div>
+          <h3 class="portfolio-title">Motor Link London <span>Brand Identity & Website</span></h3>
+        </div>
+
+        <!-- Case Study 2: Chawal Ghar -->
+        <div class="portfolio-item" onclick="openModal('modal-chawalghar')">
+          <div class="portfolio-thumbnail" style="background-image: url('11.png');"></div>
+          <h3 class="portfolio-title">Chawal Ghar <span>Cultural Brand Identity</span></h3>
+        </div>
+
+        <!-- Case Study 3: Koogle -->
+        <div class="portfolio-item" onclick="openModal('modal-koogle')">
+          <div class="portfolio-thumbnail" style="background-image: url('10.png');"></div>
+          <h3 class="portfolio-title">Koogle App <span>AI Content & Video Editing</span></h3>
+        </div>
+
+        <!-- Case Study 4: Academic Writing -->
+        <div class="portfolio-item" onclick="openModal('modal-academic')">
+          <div class="portfolio-thumbnail" style="background-image: url('12.jpg');"></div>
+          <h3 class="portfolio-title">Academic Research <span>Published Research Article</span></h3>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-column">
+        <h3>Lets talk about</h3>
+        <p>Video editing excellence, creative storytelling,Transform your content with professional editing, captivating visuals, and strategic social media management.</p>
+        <a href="contact.html" class="btn-learn-more">Learn more</a>
+      </div>
+      <div class="footer-column">
+        <h3>Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Services</h3>
+        <ul class="footer-links">
+          <li><a href="services.html">Video Editing</a></li>
+          <li><a href="services.html">Graphics & Logo Design</a></li>
+          <li><a href="services.html">Content Writting</a></li>
+          <li><a href="services.html">Website development</a></li>
+          <li><a href="services.html">App development</a></li>
+          <li><a href="services.html">Website Maintenance</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Have a Questions?</h3>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/ahmed-faraz-sahi-52421a250/" aria-label="LinkedIn" class="social-icon linkedin" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 11.268h-3v-5.604c0-1.337-.026-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.562 2.838-1.562 3.036 0 3.6 2 3.6 4.59v5.605z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/numb.man.964421" aria-label="Facebook" class="social-icon facebook" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.733 0-1.325.592-1.325 1.325v21.351c0 .732.592 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.466.099 2.797.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.312h3.59l-.467 3.622h-3.123v9.293h6.116c.732 0 1.324-.592 1.324-1.324v-21.35c0-.733-.592-1.325-1.324-1.325z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/oblue_home/" aria-label="Instagram" class="social-icon instagram" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M7.75 2h8.5a5.75 5.75 0 0 1 5.75 5.75v8.5a5.75 5.75 0 0 1-5.75 5.75h-8.5a5.75 5.75 0 0 1-5.75-5.75v-8.5a5.75 5.75 0 0 1 5.75-5.75zm0 2a3.75 3.75 0 0 0-3.75 3.75v8.5a3.75 3.75 0 0 0 3.75 3.75h8.5a3.75 3.75 0 0 0 3.75-3.75v-8.5a3.75 3.75 0 0 0-3.75-3.75h-8.5zm8.75 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <p class="footer-bottom-text">Copyright © 2025 All rights reserved | Powered by Ahmed Faraz </p>
+  </footer>
+
+
+  <!-- MODALS SECTION -->
+
+  <!-- Modal for Motor Link Branding -->
+  <div id="modal-motorlink-brand" class="modal-backdrop">
+      <div class="modal-content modal-enter">
+          <button onclick="closeModal('modal-motorlink-brand')" class="close-btn">&times;</button>
+          <h2 style="font-size: 2rem; margin-bottom: 10px;">Motor Link London</h2>
+          <p style="color: var(--text-secondary);">A premium brand identity for a high-performance car dealership in the UK.</p>
+          
+          <div class="modal-grid">
+              <div>
+                  <h4 style="margin-top: 20px;">Project Brief</h4>
+                  <p style="color: var(--text-secondary); font-size: 0.95rem;">To create a complete brand identity that captures speed, power, and trustworthiness.</p>
+                  
+                  <h4 style="margin-top: 20px;">Deliverables</h4>
+                  <ul class="modal-list">
+                      <li>Logo Design (Urdu + English)</li>
+                      <li>Color Palette (Crimson, Charcoal, White)</li>
+                      <li>Typography System (Neue Haas Grotesk)</li>
+                      <li>Business Cards & Social Media Visuals</li>
+                      <li>Full Brand Guideline PDF</li>
+                  </ul>
+
+                  <a href="https://motorlinklondon.co.uk/" target="_blank" class="btn-primary" style="margin-top: 10px;">View Live Website</a>
+              </div>
+              <div style="text-align: center;">
+                  <img src="9.png" style="width: 100%; border-radius: 12px; border: 1px solid var(--glass-border);">
+                  <p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 10px;">Brand guideline mockup</p>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Modal for Chawal Ghar -->
+  <div id="modal-chawalghar" class="modal-backdrop">
+      <div class="modal-content modal-enter">
+          <button onclick="closeModal('modal-chawalghar')" class="close-btn">&times;</button>
+          <h2 style="font-size: 2rem; margin-bottom: 10px;">Chawal Ghar</h2>
+          <p style="color: var(--text-secondary);">A South Asian food brand delivering premium quality basmati rice.</p>
+          
+          <div class="modal-grid">
+              <div>
+                  <h4 style="margin-top: 20px;">Project Brief</h4>
+                  <p style="color: var(--text-secondary); font-size: 0.95rem;">Develop a full brand identity reflecting cultural heritage for use across packaging, ads, and social media.</p>
+                  
+                  <h4 style="margin-top: 20px;">Design Highlights</h4>
+                  <ul class="modal-list">
+                      <li>Warm, earthy colors (Burnt Orange, Cream)</li>
+                      <li>Bilingual branding (Urdu & English)</li>
+                      <li>Mix of traditional (Aldhabi) and modern (Cinzel) fonts</li>
+                      <li>Focus on packaging and stickers</li>
+                  </ul>
+
+                  <p style="color: var(--accent-blue); font-weight: 600; margin-top: 10px;">Live use on physical product packaging confirmed by client.</p>
+              </div>
+              <div style="text-align: center;">
+                  <img src="1.jpg" style="width: 100%; border-radius: 12px; border: 1px solid var(--glass-border);">
+                  <p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 10px;">Product packaging mockup</p>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Modal for Koogle -->
+  <div id="modal-koogle" class="modal-backdrop">
+      <div class="modal-content modal-enter">
+          <button onclick="closeModal('modal-koogle')" class="close-btn">&times;</button>
+          <h2 style="font-size: 2rem; margin-bottom: 10px;">Koogle App</h2>
+          <p style="color: var(--text-secondary);">An innovative AI-powered platform for content creation and video editing.</p>
+          
+          <div class="modal-grid">
+              <div>
+                  <h4 style="margin-top: 20px;">Project Brief</h4>
+                  <p style="color: var(--text-secondary); font-size: 0.95rem;">To develop a user-friendly AI tool that streamlines video editing and content generation.</p>
+                  
+                  <h4 style="margin-top: 20px;">Features</h4>
+                  <ul class="modal-list">
+                      <li>AI-driven video editing automation</li>
+                      <li>Content generation with natural language processing</li>
+                      <li>Intuitive user interface with real-time previews</li>
+                      <li>Cloud-based collaboration tools</li>
+                  </ul>
+
+                  <a href="#" id="viewDemoLink" class="btn-primary" style="margin-top: 10px;">View Demo</a>
+              </div>
+              <div style="text-align: center;">
+                  <img id="koogleLogo" src="10.png" style="width: 100%; border-radius: 12px; border: 1px solid var(--glass-border);" alt="Koogle Logo">
+                  <video id="koogleVideo" style="width: 100%; border-radius: 12px; border: 1px solid var(--glass-border); display: none;" controls muted preload="metadata">
+                      <source src="Koogle.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                  </video>
+                  <p id="koogleCaption" style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 10px;">Koogle app interface mockup</p>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Modal for Academic -->
+  <div id="modal-academic" class="modal-backdrop">
+      <div class="modal-content modal-enter">
+          <button onclick="closeModal('modal-academic')" class="close-btn">&times;</button>
+          <h2 style="font-size: 2rem; margin-bottom: 10px;">Academic Research</h2>
+          <p style="color: var(--text-secondary);">A comprehensive research article published in a reputed academic journal.</p>
+          
+          <div class="modal-grid">
+              <div>
+                  <h4 style="margin-top: 20px;">Research Summary</h4>
+                  <p style="color: var(--text-secondary); font-size: 0.95rem;">An in-depth study exploring innovative methodologies and findings in the field.</p>
+                  
+                  <h4 style="margin-top: 20px;">Highlights</h4>
+                  <ul class="modal-list">
+                      <li>Novel research techniques</li>
+                      <li>Significant contributions to the field</li>
+                      <li>Peer-reviewed and published</li>
+                      <li>Collaborative research efforts</li>
+                  </ul>
+
+                  <a href="#" class="btn-secondary" style="margin-top: 10px;">Read Article</a>
+              </div>
+              <div style="text-align: center;">
+                  <img src="12.jpg" style="width: 100%; border-radius: 12px; border: 1px solid var(--glass-border);">
+                  <p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 10px;">Research paper mockup</p>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      nav.classList.toggle("show");
+    }
+
+    // Modal Control Logic
+    function openModal(modalId) {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    function closeModal(modalId) {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+
+            // Reset Koogle video if applicable
+            if (modalId === 'modal-koogle') {
+                const video = document.getElementById('koogleVideo');
+                const logo = document.getElementById('koogleLogo');
+                const caption = document.getElementById('koogleCaption');
+                if (video) {
+                    video.pause();
+                    video.currentTime = 0;
+                    video.style.display = 'none';
+                }
+                if (logo) {
+                    logo.style.display = 'block';
+                }
+                if (caption) {
+                    caption.textContent = 'Koogle app interface mockup';
                 }
             }
         }
-        
-        // Add event listener for View Demo link to toggle video and logo
-        document.addEventListener('DOMContentLoaded', function() {
-            const viewDemoLink = document.getElementById('viewDemoLink');
-            const video = document.getElementById('koogleVideo');
-            const logo = document.getElementById('koogleLogo');
-            const caption = document.getElementById('koogleCaption');
+    }
+    
+    // View Demo Link logic
+    document.addEventListener('DOMContentLoaded', function() {
+        const viewDemoLink = document.getElementById('viewDemoLink');
+        const video = document.getElementById('koogleVideo');
+        const logo = document.getElementById('koogleLogo');
+        const caption = document.getElementById('koogleCaption');
 
-            if (viewDemoLink && video && logo && caption) {
-                viewDemoLink.addEventListener('click', function(event) {
-                    event.preventDefault();
-                    logo.classList.add('hidden');
-                    video.classList.remove('hidden');
-                    caption.textContent = 'Koogle app demo video';
-                    video.play();
-                });
-
-                // Add event listeners to log video playback events for debugging
-                video.addEventListener('error', (e) => {
-                    console.error('Video error:', e);
-                });
-                video.addEventListener('stalled', () => {
-                    console.warn('Video stalled');
-                });
-                video.addEventListener('waiting', () => {
-                    console.warn('Video waiting');
-                });
-                video.addEventListener('playing', () => {
-                    console.log('Video playing');
-                });
-                video.addEventListener('ended', () => {
-                    console.log('Video ended');
-                });
-            }
-        });
-
-        // Close modal if user clicks outside of the modal content
-        window.onclick = function(event) {
-            if (event.target.classList.contains('modal-backdrop')) {
-                const modals = document.querySelectorAll('.modal-backdrop');
-                modals.forEach(modal => {
-                    if (!modal.classList.contains('hidden')) {
-                        closeModal(modal.id);
-                    }
-                });
-            }
+        if (viewDemoLink && video && logo && caption) {
+            viewDemoLink.addEventListener('click', function(event) {
+                event.preventDefault();
+                logo.style.display = 'none';
+                video.style.display = 'block';
+                caption.textContent = 'Koogle app demo video';
+                video.play();
+            });
         }
-    </script>
+    });
 
+    // Close on outside click
+    window.onclick = function(event) {
+        if (event.target.classList.contains('modal-backdrop')) {
+            closeModal(event.target.id);
+        }
+    }
+  </script>
 </body>
 </html>

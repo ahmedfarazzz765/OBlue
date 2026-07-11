@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2425718706969572"
-     crossorigin="anonymous"></script>
   <meta name="description" content="Oblue is a creative freelance service offering web development, video editing, graphic design, and digital marketing to boost your brand." />
   <meta name="keywords" content="freelance web development, video editing, graphic design, logo design, social media marketing, Oblue services" />
   <meta name="author" content="Ahmed Faraz" />  
@@ -21,10 +19,9 @@
 <meta name="twitter:description" content="Affordable, creative, and modern freelance services including web, video, and design.">
 <meta name="twitter:image" content="https://oblue.site/logo.png">
 
-<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="logo.png" type="image/png" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="style-responsive-additions.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -71,125 +68,173 @@
       <div class="nav-actions">
         <nav>
           <ul class="nav-links" id="navLinks">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
-        <a href="#contact" class="btn-primary">Get a Quote</a>
+        <a href="contact.html" class="btn-primary">Get a Quote</a>
       </div>
     </div>
   </header>
 
-  <!-- Scrolling Image Bar -->
-  <section class="scrolling-image-bar">
-    <div class="image-carousel" id="imageCarousel">
-      <img src="1.png" alt="Oblue 1" />
-      <img src="2.png" alt="Oblue 2" />
-      <img src="3.png" alt="Oblue 3" />
-      <img src="4.png" alt="Oblue 4" />
-      <img src="5.png" alt="Oblue 5" />
-      <img src="6.png" alt="Oblue 6" />
-      <img src="7.png" alt="Oblue 7" />
-      <img src="8.png" alt="Oblue 8" />
-      <img src="1.png" alt="Oblue 1" />
-      <img src="2.png" alt="Oblue 2" />
-      <img src="3.png" alt="Oblue 3" />
-      <img src="4.png" alt="Oblue 4" />
-      <img src="5.png" alt="Oblue 5" />
-      <img src="6.png" alt="Oblue 6" />
-      <img src="7.png" alt="Oblue 7" />
-      <img src="8.png" alt="Oblue 8" />
-    </div>
-  </section>
-
-  <!-- Hero Section -->
+  <!-- Hero Section with Background Carousel -->
   <section class="hero" id="home">
-    <div class="hero-content">
-      <h2>Your One‑Stop Creative & Tech Solutions</h2>
-      <p>Web Development | Video Editing | Graphic & Logo Design | App Handling</p>
+    <!-- Background Carousel -->
+    <div class="hero-carousel">
+      <img src="1.jpg" alt="Oblue 1" class="carousel-image active">
+      <img src="2.jpg" alt="Oblue 2" class="carousel-image">
+      <img src="3.jpg" alt="Oblue 3" class="carousel-image">
+      <img src="4.jpg" alt="Oblue 4" class="carousel-image">
+      <img src="5.jpg" alt="Oblue 5" class="carousel-image">
+      <div class="carousel-overlay"></div>
+    </div>
+    
+    <!-- Foreground Content -->
+    <div class="hero-content glass-panel">
+      <h2 class="gradient-text">Your One‑Stop Creative & Tech Solutions</h2>
+      <p>Welcome to Oblue! We are a dynamic freelancing agency passionate about helping brands shine online. From high-end web development to cinematic video editing and graphic design, we provide all the digital tools your company needs to stand out.</p>
       <div class="hero-buttons">
-        <a href="#services" class="btn-primary">See Services</a>
-        <a href="#portfolio" class="btn-secondary">Watch Demo</a>
-      </div>
-    </div>
-  </section>
-  <!-- Services Section -->
-  <section class="services" id="services">
-    <h2>Our Services</h2>
-    <div class="service-grid">
-      <div class="service-card">
-        <h3>Web Development</h3>
-        <p>Responsive and SEO-friendly websites using modern tech stacks.</p>
-      </div>
-      <div class="service-card">
-        <h3>Video Editing</h3>
-        <p>High-quality video cuts, transitions, effects, and audio syncs.</p>
-      </div>
-      <div class="service-card">
-        <h3>Graphic & Logo Design</h3>
-        <p>Professional visuals tailored for your brand identity.</p>
-      </div>
-      <div class="service-card">
-        <h3>App & Website Handling</h3>
-        <p>Support, updates, content management and app configurations.</p>
-      </div>
-      <div class="service-card">
-        <h3>Social Media Marketing</h3>
-        <p>Strategic campaigns to boost your brand's online presence.</p>
-      </div>
-      <div class="service-card">
-        <h3>Social Media Managing</h3>
-        <p>Comprehensive management of your social media channels.</p>
-      </div>
-      <div class="service-card">
-        <h3>Content Creating</h3>
-        <p>Engaging and creative content tailored to your audience.</p>
+        <a href="services.html" class="btn-primary">See Services</a>
+        <a href="portfolio.html" class="btn-secondary">Watch Demo</a>
       </div>
     </div>
   </section>
 
-  <!-- Testimonials Section -->
-  <section class="testimonials" id="testimonials">
-    <h2>What Clients Say</h2>
-    <div class="testimonial-cards">
-      <div class="testimonial-card">
-        <p>Working with Oblue was a game-changer for our online store. The site is sleek, fast, and optimized for search engines. Sales have noticeably increased since launch.</p>
-        <h4> Ayesha Malik, Founder of TrendyCart</h4>
+  <!-- Stats / Trusted By Section -->
+  <section class="stats-section">
+    <div class="container stats-container">
+      <div class="stat-item">
+        <h3>50+</h3>
+        <p>Projects Completed</p>
       </div>
-      <div class="testimonial-card">
-        <p>Oblue took my raw footage and turned it into a cinematic masterpiece. Their editing style is sharp, engaging, and perfect for my audience.</p>
-        <h4>Rizwan Shah, Content Creator</h4>
+      <div class="stat-item">
+        <h3>100%</h3>
+        <p>Client Satisfaction</p>
       </div>
-      <div class="testimonial-card">
-        <p>Our engagement skyrocketed thanks to Oblue’s strategic campaigns. They understand audience behavior and tailor content that truly resonates.</p>
-        <h4>Henry Rogers</h4>
+      <div class="stat-item">
+        <h3>5+</h3>
+        <p>Years Experience</p>
+      </div>
+      <div class="stat-item">
+        <h3>24/7</h3>
+        <p>Support Available</p>
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section class="about" id="about">
-    <h2>About Us</h2>
-    <p>At Oblue, we’re a dynamic freelancing agency passionate about helping brands shine online. With expertise in web development, video editing, graphic design, and more, we deliver creative, tailored solutions that make your business stand out. Our mission is simple: to help you look great and perform even better, not only in the digital world but also in the real world where it truly matters.
-
-.</p>
+  <!-- Featured Services -->
+  <section class="services preview-section" id="services-preview">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Core Services</h2>
+        <p>Providing top-tier digital solutions to elevate your brand.</p>
+      </div>
+      <div class="service-grid">
+        <div class="service-card">
+          <h3>Web Development</h3>
+          <p>Responsive and SEO-friendly websites using modern tech stacks.</p>
+        </div>
+        <div class="service-card">
+          <h3>Video Editing</h3>
+          <p>High-quality video cuts, transitions, effects, and audio syncs.</p>
+        </div>
+        <div class="service-card">
+          <h3>Graphic & Logo Design</h3>
+          <p>Professional visuals tailored for your brand identity.</p>
+        </div>
+      </div>
+      <div class="btn-container center mt-4">
+        <a href="services.html" class="btn-secondary">View All Services</a>
+      </div>
+    </div>
   </section>
 
-  <!-- Contact Section -->
-  <section class="contact" id="contact">
-    <h2>Get in Touch</h2>
-   <form action="https://formsubmit.co/obluehome@gmail.com" method="POST">
-  <input type="text" name="name" placeholder="Your Name" required>
-  <input type="email" name="email" placeholder="Your Email" required>
-  <input type="message" name="message" placeholder="Your Message" required>
-  <button type="submit" class="btn-primary">Send Message</button>
-</form>
-
+  <!-- Why Choose Us -->
+  <section class="why-us">
+    <div class="container">
+      <div class="section-header">
+        <h2>Why Choose Oblue?</h2>
+        <p>We blend creativity with technology to deliver results that matter.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card glass-panel">
+          <h3>Creative Excellence</h3>
+          <p>Every design, video, and line of code is crafted with passion and precision to ensure your brand stands out from the crowd.</p>
+        </div>
+        <div class="why-card glass-panel">
+          <h3>Modern Tech Stack</h3>
+          <p>We leverage the latest frameworks and tools so your website and apps are fast, secure, and ready for the future.</p>
+        </div>
+        <div class="why-card glass-panel">
+          <h3>Fast Turnaround</h3>
+          <p>We respect your time. Our streamlined processes mean you get high-quality deliverables without the unnecessary delays.</p>
+        </div>
+      </div>
+    </div>
   </section>
+
+  <!-- Featured Portfolio -->
+  <section class="portfolio preview-section" id="portfolio-preview">
+    <div class="container">
+      <div class="section-header">
+        <h2>Featured Work</h2>
+        <p>A glimpse into the digital experiences we've crafted.</p>
+      </div>
+      <div class="portfolio-gallery">
+        <div class="portfolio-item" onclick="window.location.href='portfolio.html'">
+          <div class="portfolio-thumbnail" style="background-image: url('9.png');"></div>
+          <h3 class="portfolio-title">Motor Link London <span>Brand Identity & Website</span></h3>
+        </div>
+        <div class="portfolio-item" onclick="window.location.href='portfolio.html'">
+          <div class="portfolio-thumbnail" style="background-image: url('10.png');"></div>
+          <h3 class="portfolio-title">Koogle App <span>AI Content & Video Editing</span></h3>
+        </div>
+      </div>
+      <div class="btn-container center mt-4">
+        <a href="portfolio.html" class="btn-secondary">View Full Portfolio</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest Insights (Blog) -->
+  <section class="blog-preview-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Latest Insights</h2>
+        <p>Stay updated with our newest articles and agency news.</p>
+      </div>
+      <div class="service-grid">
+        <div class="service-card">
+          <h3>The Future of Web Design in 2026</h3>
+          <p>Explore how glassmorphism and AI-driven interfaces are changing the game for brands across the globe.</p>
+          <a href="blog.html" class="btn-secondary" style="margin-top: 20px;">Read More</a>
+        </div>
+        <div class="service-card">
+          <h3>5 Video Editing Hacks for Social Media</h3>
+          <p>Learn how to capture your audience's attention in the first 3 seconds of your reels and TikToks.</p>
+          <a href="blog.html" class="btn-secondary" style="margin-top: 20px;">Read More</a>
+        </div>
+      </div>
+      <div class="btn-container center mt-4">
+        <a href="blog.html" class="btn-primary">Visit the Blog</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <div class="container cta-container glass-panel">
+      <h2>Ready to transform your brand?</h2>
+      <p>Let's build something amazing together.</p>
+      <a href="contact.html" class="btn-primary" style="font-size: 1.2rem; padding: 15px 35px;">Let's Talk</a>
+    </div>
+  </section>
+
 
   <!-- Back to Top Button -->
   <button id="backToTop" title="Back to top">&#8679;</button>
@@ -200,27 +245,28 @@
       <div class="footer-column">
         <h3>Lets talk about</h3>
         <p>Video editing excellence, creative storytelling,Transform your content with professional editing, captivating visuals, and strategic social media management.</p>
-        <a href="#contact" class="btn-learn-more">Learn more</a>
+        <a href="contact.html" class="btn-learn-more">Learn more</a>
       </div>
       <div class="footer-column">
         <h3>Links</h3>
         <ul class="footer-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Projects</a></li>
-          <li><a href="#testimonials">Testimony</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
         </ul>
       </div>
       <div class="footer-column">
         <h3>Services</h3>
         <ul class="footer-links">
-          <li><a href="#services">Video Editing</a></li>
-          <li><a href="#services">Graphics & Logo Design</a></li>
-          <li><a href="#services">Content Writting</a></li>
-          <li><a href="#services">Website development</a></li>
-          <li><a href="#services">App development</a></li>
-          <li><a href="#services">Website Maintenance</a></li>
+          <li><a href="services.html">Video Editing</a></li>
+          <li><a href="services.html">Graphics & Logo Design</a></li>
+          <li><a href="services.html">Content Writting</a></li>
+          <li><a href="services.html">Website development</a></li>
+          <li><a href="services.html">App development</a></li>
+          <li><a href="services.html">Website Maintenance</a></li>
         </ul>
       </div>
       <div class="footer-column">
@@ -397,12 +443,32 @@
 }
 
 </style>
-<script>
-  function toggleMenu() {
-    const nav = document.getElementById("navLinks");
-    nav.classList.toggle("show");
-  }
-</script>
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      nav.classList.toggle("show");
+    }
+
+    // Fade Carousel JavaScript
+    document.addEventListener('DOMContentLoaded', function() {
+      const images = document.querySelectorAll('.carousel-image');
+      let currentIndex = 0;
+      
+      function showNextImage() {
+        // Hide current image
+        images[currentIndex].classList.remove('active');
+        
+        // Move to next image
+        currentIndex = (currentIndex + 1) % images.length;
+        
+        // Show new image
+        images[currentIndex].classList.add('active');
+      }
+      
+      // Change image every 4 seconds
+      setInterval(showNextImage, 4000);
+    });
+  </script>
 
 <script>
 
@@ -429,7 +495,6 @@
 
 </body>
 </html>
-
 
 
 
