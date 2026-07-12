@@ -18,7 +18,25 @@
         <nav>
           <ul class="nav-links" id="navLinks">
             <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropbtn">Our Tools ▾</a>
+              <ul class="dropdown-content">
+                <li><a href="https://onlinegradescalculator.com" target="_blank">Online Grades Calculator</a></li>
+                <li><a href="https://ssstokio.com" target="_blank">TikTok Video Downloader</a></li>
+                <li><a href="#">Vocle (Coming Soon)</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="services.html" class="dropbtn">Services ▾</a>
+              <ul class="dropdown-content">
+                <li><a href="development.html">Development</a></li>
+                <li><a href="video-editing.html">Video Editing</a></li>
+                <li><a href="graphic-design.html">Graphic & Logo Design</a></li>
+                <li><a href="app-website-handling.html">App & Website Handling</a></li>
+                <li><a href="social-media.html">Social Media Management</a></li>
+                <li><a href="content.html">Content Creation</a></li>
+              </ul>
+            </li>
             <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="testimonials.html">Testimonials</a></li>
@@ -36,31 +54,27 @@
     <section class="services" id="services">
       <h2>Our Services</h2>
       <div class="service-grid">
-        <div class="service-card">
-          <h3>Web Development</h3>
-          <p>Responsive and SEO-friendly websites using modern tech stacks.</p>
+        <div class="service-card" id="development" onclick="window.location.href='development.html';" style="cursor: pointer;">
+          <h3>Development</h3>
+          <p>End-to-end web and mobile app development using modern tech stacks to bring your digital vision to life.</p>
         </div>
-        <div class="service-card">
+        <div class="service-card" id="video-editing" onclick="window.location.href='video-editing.html';" style="cursor: pointer;">
           <h3>Video Editing</h3>
           <p>High-quality video cuts, transitions, effects, and audio syncs.</p>
         </div>
-        <div class="service-card">
+        <div class="service-card" id="graphic-design" onclick="window.location.href='graphic-design.html';" style="cursor: pointer;">
           <h3>Graphic & Logo Design</h3>
           <p>Professional visuals tailored for your brand identity.</p>
         </div>
-        <div class="service-card">
+        <div class="service-card" id="app-website-handling" onclick="window.location.href='app-website-handling.html';" style="cursor: pointer;">
           <h3>App & Website Handling</h3>
           <p>Support, updates, content management and app configurations.</p>
         </div>
-        <div class="service-card">
-          <h3>Social Media Marketing</h3>
-          <p>Strategic campaigns to boost your brand's online presence.</p>
+        <div class="service-card" id="social-media" onclick="window.location.href='social-media.html';" style="cursor: pointer;">
+          <h3>Social Media Management</h3>
+          <p>Strategic campaigns and comprehensive management of your social media channels.</p>
         </div>
-        <div class="service-card">
-          <h3>Social Media Managing</h3>
-          <p>Comprehensive management of your social media channels.</p>
-        </div>
-        <div class="service-card">
+        <div class="service-card" id="content" onclick="window.location.href='content.html';" style="cursor: pointer;">
           <h3>Content Creating</h3>
           <p>Engaging and creative content tailored to your audience.</p>
         </div>
