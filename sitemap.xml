@@ -4,13 +4,25 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-
-<url>
-  <loc>https://oblue.site/</loc>
-  <lastmod>2025-07-21T22:55:38+00:00</lastmod>
-</url>
-
+<url><loc>https://oblue.site/</loc><lastmod>2026-07-16T10:45:00+00:00</lastmod><priority>1.0</priority></url>
+<url><loc>https://oblue.site/about.html</loc><lastmod>2026-07-16T10:45:00+00:00</lastmod><priority>0.8</priority></url>
+<url><loc>https://oblue.site/app-website-handling.html</loc><lastmod>2026-07-16T10:45:00+00:00</lastmod><priority>0.8</priority></url>
+<url><loc>https://oblue.site/blog-seo-content-marketing-strategy.html</loc><lastmod>2026-07-16T10:45:00+00:00</lastmod><priority>0.6</priority></url>
+<url><loc>https://oblue.site/blog-video-editing-hacks-social-media.html</loc><lastmod>2026-07-16T10:45:00+00:00</lastmod><priority>0.6</priority></url>
+<url><loc>https://oblue.site/blog-web-design-trends-2026.html</loc><lastmod>2026-07-16T10:45:00+00:00</lastmod><priority>0.6</priority></url>
+<url><loc>https://oblue.site/blog-why-business-needs-website.html</loc><lastmod>2026-07-16T10:45:00+00:00</lastmod><priority>0.6</priority></url>
+<url><loc>https://oblue.site/blog.html</loc><lastmod>2026-07-16T10:45:00+00:00</lastmod><priority>0.8</priority></url>
+<url><loc>https://oblue.site/contact.html</loc><lastmod>2026-07-16T10:45:00+00:00</lastmod><priority>0.8</priority></url>
+<url><loc>https://oblue.site/content.html</loc><lastmod>2026-07-16T10:45:00+00:00</lastmod><priority>0.8</priority></url>
+<url><loc>https://oblue.site/development.html</loc><lastmod>2026-07-16T10:45:00+00:00</lastmod><priority>0.8</priority></url>
+<url><loc>https://oblue.site/graphic-design.html</loc><lastmod>2026-07-16T10:45:00+00:00</lastmod><priority>0.8</priority></url>
+<url><loc>https://oblue.site/portfolio.html</loc><lastmod>2026-07-16T10:45:00+00:00</lastmod><priority>0.8</priority></url>
+<url><loc>https://oblue.site/privacy-policy.html</loc><lastmod>2026-07-16T10:45:00+00:00</lastmod><priority>0.5</priority></url>
+<url><loc>https://oblue.site/quote.html</loc><lastmod>2026-07-16T10:45:00+00:00</lastmod><priority>0.8</priority></url>
+<url><loc>https://oblue.site/services.html</loc><lastmod>2026-07-16T10:45:00+00:00</lastmod><priority>0.8</priority></url>
+<url><loc>https://oblue.site/social-media.html</loc><lastmod>2026-07-16T10:45:00+00:00</lastmod><priority>0.8</priority></url>
+<url><loc>https://oblue.site/testimonials.html</loc><lastmod>2026-07-16T10:45:00+00:00</lastmod><priority>0.8</priority></url>
+<url><loc>https://oblue.site/video-editing.html</loc><lastmod>2026-07-16T10:45:00+00:00</lastmod><priority>0.8</priority></url>
 
 </urlset>
